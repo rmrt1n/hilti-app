@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "title": "phising",
+        "desc": "introduction to phising with ms yusnita",
+        "type": "module",
+        "nchild": 2,
+        "children": [
+            {
+                "title": "string",
+                "type": "chapter",
+                "nchild": 2,
+                "children": [
+                    {
+                        "title": "string",
+                        "type": "subchapter",
+                        "content": "lorem ipsum"
+                    },
+                    {
+                        "title": "string",
+                        "type": "subchapter",
+                        "content": "lorem ipsum dolor"
+                    }
+                ],
+                "content": ""
+            },
+            {
+                "title": "string",
+                "type": "chapter",
+                "nchild": 0,
+                "children": [],
+                "content": "hello world"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "malware",
+        "desc": "malware reverse engineering basics",
+        "type": "module",
+        "nchild": 1,
+        "children": [
+            {
+                "title": "marlaware",
+                "type": "chapter",
+                "nchild": 0,
+                "children": [],
+                "content": "malware ransomware"
+            }
+        ]
+    }
+]

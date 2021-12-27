@@ -3,7 +3,7 @@ import MainContentBreadcrumb from '../../components/MainContentBreadcrumb'
 import { useState, useEffect } from 'react'
 import { Layout, Menu, Breadcrumb } from 'antd'
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const res = await fetch(`http://localhost:3000/api/learn/${params.id}`);
   const content = await res.json()
   console.log('getstaci', content)
@@ -12,17 +12,17 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: [], //indicates that no page needs be created at build time
-    fallback: 'blocking' //indicates the type of fallback
-  }
-}
+// export async function getStaticPaths() {
+  // return {
+    // paths: [], //indicates that no page needs be created at build time
+    // fallback: 'blocking' //indicates the type of fallback
+  // }
+// }
 
 const { Header, Sider, Content } = Layout
 
 
-export default function Module({ content }) {
+export default function Learn({ content }) {
   const [shownContent, setShownContent] = useState(getFirstContent(content))
 
   function getFirstContent(obj) {

@@ -3,7 +3,7 @@ import MainContentBreadcrumb from '../../components/MainContentBreadcrumb'
 import { Card, Radio, Button, Form } from 'antd'
 import { useState, useRef } from 'react'
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const res = await fetch(`http://localhost:3000/api/exercise/${params.id}`)
   const content = await res.json()
   return {
@@ -11,14 +11,14 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: [], //indicates that no page needs be created at build time
-    fallback: 'blocking' //indicates the type of fallback
-  }
-}
+// export async function getStaticPaths() {
+  // return {
+    // paths: [], //indicates that no page needs be created at build time
+    // fallback: 'blocking' //indicates the type of fallback
+  // }
+// }
 
-export default function Question({ content }) {
+export default function Exercise({ content }) {
   const [answered, setAnswered] = useState(false);
   const [nCorrect, setNCorrect] = useState(0);
   const bottomRef = useRef(null);

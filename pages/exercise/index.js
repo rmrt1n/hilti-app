@@ -2,7 +2,7 @@ import Link from 'next/link'
 import MainContent from '../../components/MainContent'
 import { Card }from 'antd'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/api/exercise')
   const exercise = await res.json()
   return {
@@ -12,7 +12,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Exercise({ exercise }) {
+export default function Exercises({ exercise }) {
   return (
     <MainContent title="Learn">
       { exercise.map((i) => (

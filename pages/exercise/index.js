@@ -3,7 +3,7 @@ import MainContent from '../../components/MainContent'
 import { Card }from 'antd'
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/exercise')
+  const res = await fetch(process.env.URL + '/api/exercise')
   const exercise = await res.json()
   return {
     props: {

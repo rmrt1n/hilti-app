@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Card }from 'antd'
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/story')
+  const res = await fetch(process.env.URL + '/api/story')
   const story = await res.json()
   return {
     props: {

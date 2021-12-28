@@ -6,7 +6,7 @@ import styles from '../../styles/Story.module.css'
 import Router from 'next/router'
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`http://localhost:3000/api/story/${params.id}`)
+  const res = await fetch(`${process.env.URL}/api/story/${params.id}`)
   const story = await res.json()
   return {
     props: { story }

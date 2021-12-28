@@ -5,19 +5,12 @@ import { useState, useRef } from 'react'
 import Router from 'next/router'
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`http://localhost:3000/api/exercise/${params.id}`)
+  const res = await fetch(`${process.env.URL}/api/exercise/${params.id}`)
   const content = await res.json()
   return {
     props: { content }
   }
 }
-
-// export async function getStaticPaths() {
-  // return {
-    // paths: [], //indicates that no page needs be created at build time
-    // fallback: 'blocking' //indicates the type of fallback
-  // }
-// }
 
 export default function Exercise({ content }) {
   const [answered, setAnswered] = useState(false);

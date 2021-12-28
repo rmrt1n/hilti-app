@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { Layout, Menu, Breadcrumb } from 'antd'
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`http://localhost:3000/api/learn/${params.id}`);
+  const res = await fetch(`${process.env.URL}/api/learn/${params.id}`);
   const content = await res.json()
   console.log('getstaci', content)
   return {

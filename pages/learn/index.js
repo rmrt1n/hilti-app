@@ -6,7 +6,7 @@ import Link from 'next/link'
 const { Sider, Header } = Layout
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/learn');
+  const res = await fetch(process.env.URL + '/api/learn');
   const content = await res.json();
   return {
     props: {

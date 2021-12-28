@@ -4,9 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export async function getServerSideProps() {
-  const res1 = await fetch('http://localhost:3000/api/story')
+  const res1 = await fetch(process.env.URL + '/api/story')
   const story = await res1.json()
-  const res2 = await fetch('http://localhost:3000/api/exercise')
+  const res2 = await fetch(process.env.URL + '/api/exercise')
   const exercise = await res2.json()
 
   return {

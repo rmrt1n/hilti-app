@@ -16,7 +16,7 @@ export default function Stories({ story }) {
   return (
     <MainContent title="Story">
       { story.map((i) => (
-        <Link key={ i.id } href={ `/story/${i.id}` }>
+        <Link key={ i.id } href={ `/story/${i.id}` } passHref>
           <Card title={ i.title } key={ i.id } style={{ marginBottom: '10px', cursor: 'pointer' }}>
             { i.title }
           </Card>

@@ -69,8 +69,8 @@ export default function Learn({ content }) {
           </Menu>
         </Sider>
         <Content style={{ height: '100%', padding: '5px' }}>
-          { shownContent.split('\n').map((e) => (
-            <p>{ e }</p>
+          { shownContent.split('\n').map((i, j) => (
+            <p key={ j }>{ i }</p>
           )) }
         </Content>
       </Layout>

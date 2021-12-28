@@ -19,7 +19,7 @@ export default function Learns({ content }) {
   return (
     <MainContent title="Learn">
       { content.map((i) => (
-        <Link key={ i.id } href={ `/learn/${i.id}` }>
+        <Link key={ i.id } href={ `/learn/${i.id}` } passHref>
           <Card title={ i.title } key={ i.id } style={{ marginBottom: '10px', cursor: 'pointer' }}>
             { i.desc }
           </Card>

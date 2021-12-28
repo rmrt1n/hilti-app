@@ -16,7 +16,7 @@ export default function Exercises({ exercise }) {
   return (
     <MainContent title="Learn">
       { exercise.map((i) => (
-        <Link key={ i.id } href={ `/exercise/${i.id}` }>
+        <Link key={ i.id } href={ `/exercise/${i.id}` } passHref>
           <Card title={ i.title } key={ i.id } style={{ marginBottom: '10px', cursor: 'pointer' }}>
             { i.title }
           </Card>

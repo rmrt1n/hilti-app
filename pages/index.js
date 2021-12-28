@@ -30,7 +30,7 @@ export default function Home({ story, exercise }) {
     <MainContent title="Dashboard">
       <Card title="Story">
         { story.map((i) => (
-          <Link key={ i.id } href={ `/story/${i.id}` }>
+          <Link key={ i.id } href={ `/story/${i.id}` } passHref>
           <Row gutter={ 24 }>
             <Col span={ 10 }>
               <div style={ carouselStyle }>
@@ -54,7 +54,7 @@ export default function Home({ story, exercise }) {
       <MainContent>
         <Card title="exercise">
           { exercise.map((i) => (
-            <Link key={ i.id } href={ `/exercise/${i.id}` }>
+            <Link key={ i.id } href={ `/exercise/${i.id}` } passHref>
               <Card title={ i.title } key={ i.id } style={{ marginBottom: '10px', cursor: 'pointer' }} />
             </Link>
           )) }

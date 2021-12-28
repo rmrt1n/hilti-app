@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import MainContentBreadcrumb from '../../components/MainContentBreadcrumb'
 import { Card, Radio, Button, Form } from 'antd'
 import { useState, useRef } from 'react'
+import Router from 'next/router'
 
 export async function getServerSideProps({ params }) {
   const res = await fetch(`http://localhost:3000/api/exercise/${params.id}`)
@@ -69,6 +70,7 @@ export default function Exercise({ content }) {
         { answered && (
           <Card title="Your Score:">
             <h1>{ nCorrect }</h1>
+            <Button type="primary" onClick={ () => Router.push('#') }>Play Again?</Button>
           </Card>
         ) }
         </div>

@@ -33,6 +33,7 @@ export default function Story({ story }) {
   const [hasNext, setHasNext] = useState(true)
   const [status, setStatus] = useState('pre') // pre | game | post
   const [isQuestion, setIsQuestion] = useState(false)
+  const [isWrong, setIsWrong] = useState(false)
 
   const startGame = () => {
     setStatus('game')
@@ -43,7 +44,6 @@ export default function Story({ story }) {
   const nextSlide = () => {
     setHasPrevious(true)
     const next = curSceneId + 1
-    console.log(curSceneId, next, story.scenes.length)
     if (next === story.scenes.length) {
       setHasNext(false)
       setStatus('post')
@@ -55,6 +55,8 @@ export default function Story({ story }) {
     setCurSlide(story.scenes[next])
     setCurSlideImg(story.scenes[next].img)
     setIsQuestion(story.scenes[next].type === 'question')
+    setHasNext(true)
+    setHasPrevious(true)
     if (story.scenes[next].type === 'question') {
       setHasNext(false)
       setHasPrevious(false)
@@ -69,19 +71,20 @@ export default function Story({ story }) {
     setCurSlide(story.scenes[prev])
     setCurSlideImg(story.scenes[prev].img)
     setIsQuestion(story.scenes[prev].type === 'question')
+    if (story.scenes[prev].type === 'question') {
+      setHasNext(false)
+      setHasPrevious(false)
+    }
   }
 
   const answer = (choice) => {
     if (choice !== curSlide.answer) {
       setStatus('post')
       setCurSlideImg(curSlide.wrongImg)
+      setIsWrong(true)
       setIsQuestion(false)
       return
     }
-    // if (curSlide === story.scenes[story.scenes.length - 1]) {
-      // // win
-      // return
-    // }
     nextSlide()
   }
 
@@ -119,7 +122,9 @@ export default function Story({ story }) {
             ? story.desc
             : status === 'game'
               ? curSlide.text
-              : curSlide.wrongText
+              : isWrong 
+                ? curSlide.wrongText
+                : story.winText
         }
       </p>
       { status === 'pre' && 

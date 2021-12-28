@@ -12,15 +12,7 @@ export async function getServerSideProps({ params }) {
   }
 }
 
-// export async function getStaticPaths() {
-  // return {
-    // paths: [], //indicates that no page needs be created at build time
-    // fallback: 'blocking' //indicates the type of fallback
-  // }
-// }
-
 const { Header, Sider, Content } = Layout
-
 
 export default function Learn({ content }) {
   const [shownContent, setShownContent] = useState(getFirstContent(content))
@@ -77,7 +69,9 @@ export default function Learn({ content }) {
           </Menu>
         </Sider>
         <Content style={{ height: '100%', padding: '5px' }}>
-          <p>{ shownContent }</p>
+          { shownContent.split('\n').map((e) => (
+            <p>{ e }</p>
+          )) }
         </Content>
       </Layout>
     </MainContentBreadcrumb>

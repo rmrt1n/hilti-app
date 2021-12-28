@@ -1,51 +1,66 @@
 [
     {
         "id": 1,
-        "title": "phising",
-        "desc": "introduction to phising with ms yusnita",
+        "title": "Phishing",
+        "desc": "introduction to phising",
         "type": "module",
         "nchild": 2,
         "children": [
             {
-                "title": "string",
-                "type": "chapter",
-                "nchild": 2,
-                "children": [
-                    {
-                        "title": "string",
-                        "type": "subchapter",
-                        "content": "lorem ipsum"
-                    },
-                    {
-                        "title": "string",
-                        "type": "subchapter",
-                        "content": "lorem ipsum dolor"
-                    }
-                ],
-                "content": ""
-            },
-            {
-                "title": "string",
+                "title": "What is Phishing",
                 "type": "chapter",
                 "nchild": 0,
                 "children": [],
-                "content": "hello world"
+                "content": "According to phishing.org, it is a cybercrime in which someone, acting as legitimate institution, tries to obtain others sensitive data, such as personally identifiable information, banking, and credit card details, and passwords via email, phone call or text message.\nCommon traits of phishing attack include\n- Offers which seem too good to be true\nFor example, a message which claims you to be the winner of a lottery. This is often the case where they demand you to provide personal information to redeem it.\n\n- Sense of urrgency\nCybercriminals tend to mess with our mental state by telling us to act immediately as or something bad will happen in return. For instance, you are being told that your bank account has been suspended due to some reasons.\n\nPhishing Attacks can be mitigated by:\n- If you are required to verify your information, try to reach out to the company personally for further assurance.\n- Do not click any link immediately. Try to hover over the hyperlink to look for the URL destination. Additionally, if the URL is shortened, try to reveal it using tools such as https://unshorten.it/\n\n"
+            },
+            {
+                "title": "Types of Phising",
+                "type": "chapter",
+                "nchild": 4,
+                "children": [
+                    {
+                        "title": "Spear Phishing",
+                        "type": "subchapter",
+                        "content": "This is phishing technique which is the opposite of traditional mass phishing attack. Cybercriminals usally do thorough research on their target such that it is easier to build trust with their victim. Thus, it takes some effort to identify this kind of phishing attacks. One way to mitigate the chance of being the victim is to avoid posting personal information online."
+                    },
+                    {
+                        "title": "Email Phishing",
+                        "type": "subchapter",
+                        "content": "This is one the most common phishing technique in which victims are requested to fill in their personal details with some urgent reasons. One way to avoid this attack is by identifying the sender address."
+                    },
+                    {
+                        "title": "Link Manipulation",
+                        "type": "subchapter",
+                        "content": "This technique often comes hand in hand with email and SMS phishing. Cybercriminals will try to mimic a certain website such that it looks legitimate and trick the victim to think that it is indeed the real website. For instance, a threat actor may try to use a URL which seems to be legitimate which contain exact copy of the website as well. To prevent this, we need to develop a habit to not click on the link directly. Instead, try to visit the link personally."
+                    },
+                    {
+                        "title": "Vishing",
+                        "type": "subchapter",
+                        "content": "Phishing attack can be carried out through phone calls as well. They tend to use fake caller ID and claims to be the employee of a certain company."
+                    },
+                    {
+                        "title": "Smishing (SMS Phishing)",
+                        "type": "subchapter",
+                        "content": "Similar to email phishing, this phishing is conducted via Short Message Service. These messages usually claims that you won some prizes and often come with a link as well to redeem the prizes."
+                    }
+                ],
+                "content": ""
             }
         ]
     },
     {
         "id": 2,
-        "title": "malware",
-        "desc": "malware reverse engineering basics",
+        "title": "Malware",
+        "desc": "Coming soon",
         "type": "module",
         "nchild": 1,
         "children": [
             {
-                "title": "marlaware",
+                "title": "Page in Progress",
                 "type": "chapter",
                 "nchild": 0,
                 "children": [],
-                "content": "malware ransomware"
+                "content": "Coming soon..."
             }
         ]
     }

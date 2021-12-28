@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Layout, Menu } from 'antd'
-import UserOutlined from '@ant-design/icons/UserOutlined'
-import HomeOutlined from '@ant-design/icons/HomeOutlined'
-import LogoutOutlined from '@ant-design/icons/LogoutOutlined'
-import BookOutlined from '@ant-design/icons/BookOutlined'
+import { Layout, Menu, Icon } from 'antd'
+import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome'
+import { 
+  faHome, faUser, faGamepad, faDumbbell, faGraduationCap, faSignOutAlt
+} from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -22,22 +22,22 @@ export default function SideNav({ children }) {
         onCollapse={ onCollapse }
       >
         <Menu defaultSelectedKey={ ['2'] } mode="inline">
-          <Menu.Item key="1" icon={ <UserOutlined /> }>
+          <Menu.Item key="1" icon={ <FontAwesomeIcon icon={ faUser } /> }>
             <Link href="/profile">Profile</Link>
           </Menu.Item>
-          <Menu.Item key="2" icon={ <HomeOutlined /> }>
+          <Menu.Item key="2" icon={ <FontAwesomeIcon icon={ faHome } /> }>
             <Link href="/">Dashboard</Link>
           </Menu.Item>
-          <Menu.Item key="3" icon={ <HomeOutlined /> }>
+          <Menu.Item key="3" icon={ <FontAwesomeIcon icon={ faGamepad } /> }>
             <Link href="/story">Story</Link>
           </Menu.Item>
-          <Menu.Item key="4" icon={ <HomeOutlined /> }>
+          <Menu.Item key="4" icon={ <FontAwesomeIcon icon={ faDumbbell } /> }>
             <Link href="/exercise">Exercise</Link>
           </Menu.Item>
-          <Menu.Item key="5" icon={ <BookOutlined /> }>
+          <Menu.Item key="5" icon={ <FontAwesomeIcon icon={ faGraduationCap } /> }>
             <Link href="/learn">Learn</Link>
           </Menu.Item>
-          <Menu.Item key="6" icon={ <LogoutOutlined /> }>
+          <Menu.Item key="6" icon={ <FontAwesomeIcon icon={ faSignOutAlt } /> }>
             Logout
           </Menu.Item>
         </Menu>

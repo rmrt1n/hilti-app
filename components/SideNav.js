@@ -44,7 +44,6 @@ export default function SideNav({ children }) {
       </Sider>
       <Layout>
         { children }
-        <Footer />
       </Layout>
     </Layout>
   )

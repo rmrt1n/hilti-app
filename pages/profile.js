@@ -1,7 +1,7 @@
 import MainContent from '../components/MainContent'
-import { Avatar, Button, Input, Card, Row, Col
-} from 'antd'
+import { Avatar, Button, Input, Card, Row, Col, Progress } from 'antd'
 import UserOutlined from '@ant-design/icons/UserOutlined'
+import Stat from '../components/Stat'
 import { useState } from 'react'
 
 export default function Profile() {
@@ -40,6 +40,17 @@ export default function Profile() {
 
       <MainContent>
         <Card title="Statistics">
+          <Row gutter={ 24 }>
+            <Col span={ 8 }>
+              <Stat percent={ 80 } text="Security"/>
+            </Col>
+            <Col span={ 8 }>
+              <Stat percent={ 100 } text="Phishing"/>
+            </Col>
+            <Col span={ 8 }>
+              <Stat percent={ 60 } text="Malware"/>
+            </Col>
+          </Row>
         </Card>
       </MainContent>
     </>

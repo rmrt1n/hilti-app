@@ -1,7 +1,8 @@
 # Cybernaut
 A gamified cybersecurity learning platform with a story-based approach and
 multiple learning methods for different types of learners. Made as a submission
-for [HILTI IT Competition](https://itcompetition.hilti.group/).
+for [HILTI IT Competition](https://itcompetition.hilti.group/). As of the time 
+of this writing, the application can be previewed at https://hilti-app.vercel.app/.
 
 ## Building
 This project is built with nextjs. 
